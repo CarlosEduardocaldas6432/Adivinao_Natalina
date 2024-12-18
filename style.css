@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html,body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #013208, #3b7a3e);
+ 
+}
+
+h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    
+}
+
+p{
+    font-size: 17px;
+}
+
+.sessao_principal{
+
+ display: flex;
+  width: 650px;
+  margin: auto;
+
+}
+
+.palavras_tentadas{
+
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: white;
+
+
+
+}
+
+.foto_pricipal{
+
+    width: 200px;
+    height: 200px;
+    background-color: rgb(232, 232, 232);
+    margin-left: 25px;
+    border-radius: 5px;
+
+}
+
+.foto_interrogacao{
+
+    width: 100%;
+    height: 100%;
+    border: solid 2px #f2f2f2;
+    border-radius: 10px;
+
+
+}
+
+.foto_do_jogo{
+
+  width: 100%;
+  height: 100%;
+  border: solid 2px #f2f2f2;
+  display:none;
+  border-radius: 10px;
+
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  
+
+}
+
+
+.dicas{
+
+    width: 200px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    margin-left: 25px;
+
+}
+
+
+.sessao_nome_da_foto{
+
+    
+    display: flex; 
+    margin-top: 10px;            /* Ativa o Flexbox */
+    flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    align-items: center;       /* Centraliza os itens verticalmente */
+    gap: 4px;                 /* Espaçamento entre os itens */
+    
+
+
+
+}
+
+
+
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 38px;
+  height: 38px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+
+
+
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.flip-card-front {
+background-color:#00337a;
+border: solid 2px #ffffff;
+}
+
+.flip-card-back {
+  background-color:#03a303;
+  border: solid 2px #ffffff;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+.sesao_entrada_dados{
+
+    display: flex; 
+    margin-top: 25px;            /* Ativa o Flexbox */
+    flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    align-items: center;       /* Centraliza os itens verticalmente */
+    gap: 10px;  
+
+}
+
+ 
+
+
+
+
+
+
+
+.input-container {
+    position: relative;
+  }
+  
+  .input {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+    color: #333;
+  }
+  
+  .input:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input::placeholder {
+    color: #999;
+  }
+  
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6c63ff;
+    transition: width 0.3s ease;
+  }
+  
+  .input:focus + .highlight {
+    width: 100%;
+  }
+  
+  /* Optional: Animation on focus */
+  @keyframes input-focus {
+    from {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+  
+    to {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .input:focus {
+    animation: input-focus 0.3s ease;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.botao{
+
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ccff33, #66cc00);
+    transition: .1s ease-in-out;
+}
+
+.botao:hover {
+
+    opacity: 0.9;
+
+
+}
+
+.botao:active{
+
+    transform: translateX(0.1em) translateY(0.1em);
+
+}
+
+.checkmark{
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+
+
+
+.sessao_info_jogo{
+
+    display: flex; 
+    margin-top: 20px;            /* Ativa o Flexbox */
+    flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    align-items: center;       /* Centraliza os itens verticalmente */
+    gap: 500px;
+    margin-bottom: 8px; 
+    
+}
+
+.info_tentativas{
+
+    color: white;
+
+}
+
+.info_letras_gastas{
+
+    color: white;
+
+}
+
+
+.sessao_teclado{
+
+    width: 70%;
+    height: 140px;
+    margin: auto;
+
+}
+
+.linha_teclas{
+
+    display: flex; 
+    margin-top: 10px;            /* Ativa o Flexbox */
+    flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    align-items: center;       /* Centraliza os itens verticalmente */
+    gap: 4px;                 /* Espaçamento entre os itens */
+
+}
+
+.teclas{
+
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    background-color:#c90000;
+    border-radius: 5px;
+    color: white;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+
+}
+
+.teclas:hover {
+
+    opacity: 0.9;
+
+
+}
+
+.teclas:active{
+
+    transform: translateX(0.1em) translateY(0.1em);
+
+}
+
+
+.teclas_clicadas_corretas{
+
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    background-color:#03a303;
+    border-radius: 5px;
+    color: white;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+.teclas_clicadas_erradas{
+
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    background-color:#7d7d7d;
+    border-radius: 5px;
+    color: white;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+
+
+.letras_das_teclas{
+
+    font-size: 30px;
+    line-height: 38px;
+    
+
+}
+
+
+
+
+.sessao_win{
+
+  width: 40%;
+  height: 140px;
+  margin: auto;
+  background-color: #01b00c;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  display: none;
+
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
+
+}
+
+
+
+
+.sessao_lose{
+
+  width: 40%;
+  height: 140px;
+  margin: auto;
+  background-color: #00337a;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  display: none;
+
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
+}
+
+.titulo_final{
+
+  padding-top: 10px;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    hsl(248, 39%, 39%) 0%,
+    hsl(248, 39%, 49%) 8%,
+    hsl(248, 39%, 39%) 92%,
+    hsl(248, 39%, 29%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: hsl(248, 53%, 58%);
+  padding: 16px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+
+
+.sessao_fim{
+
+  width: 40%;
+  height: 140px;
+  margin: auto;
+  background-color: #01b00c;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  display: none;
+
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+
+
+
+/* Para telas maiores (1440px ou mais) */
+@media (min-width: 1440px) {
+  .sessao_principal {
+    max-width: 1200px; /* Aumenta a largura máxima */
+    gap: 40px; /* Espaçamento maior entre os itens */
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Aumenta o tamanho do título */
+  }
+
+  p {
+    font-size: 20px; /* Aumenta o tamanho do texto */
+  }
+
+  .teclas, .teclas_clicadas_corretas, .teclas_clicadas_erradas {
+    width: 50px; /* Aumenta o tamanho das teclas */
+    height: 50px;
+    font-size: 1.2rem; /* Aumenta o tamanho da letra */
+  }
+
+  .sessao_teclado {
+    width: 60%; /* Usa mais largura disponível */
+  }
+
+  .sessao_win, .sessao_lose {
+    max-width: 600px; /* Aumenta o tamanho das mensagens */
+    height: 200px; /* Aumenta a altura */
+    font-size: 1.5rem; /* Aumenta o tamanho do texto */
+  }
+}
+
+
+
+
+
+
+/* Para telas ultra-largas (2560px ou mais) */
+@media (min-width: 2560px) {
+  .sessao_principal {
+    max-width: 2200px; /* Usa ainda mais largura disponível */
+    gap: 60px; /* Espaçamento maior entre os itens */
+  }
+
+  h2 {
+    font-size: 4rem; /* Aumenta significativamente o tamanho do título */
+  }
+
+  p {
+    font-size: 28px; /* Tamanho de texto mais confortável */
+  }
+
+  .teclas, .teclas_clicadas_corretas, .teclas_clicadas_erradas {
+    width: 70px; /* Tamanhos maiores para melhor visibilidade */
+    height: 70px;
+    font-size: 2rem; /* Texto proporcional aos tamanhos ampliados */
+  }
+
+  .sessao_teclado {
+    width: 40%; /* Ajusta para centralizar ainda melhor */
+  }
+
+  .sessao_win, .sessao_lose {
+    max-width: 1000px; /* Aumenta ainda mais as mensagens */
+    height: 300px;
+    font-size: 2.5rem; /* Texto grande e destacado */
+  }
+
+  .sessao_nome_da_foto {
+    gap: 10px; /* Espaçamento ampliado entre elementos */
+  }
+
+  .foto_pricipal {
+    width: 300px; /* Aumenta o tamanho da imagem principal */
+    height: 300px;
+  }
+
+  .dicas {
+    width: 300px; /* Ajusta o tamanho das dicas */
+    height: 300px;
+    font-size: 24px; /* Torna o texto mais legível */
+  }
+
+  .flip-card {
+    width: 60px; /* Cartões de tamanho maior */
+    height: 60px;
+  }
+
+  .input {
+    max-width: 400px; /* Inputs maiores para maior conforto visual */
+    font-size: 1.2em;
+  }
+
+  .botao {
+    width: 50px; /* Aumenta tamanho do botão */
+    height: 50px;
+  }
+
+  .pushable .front {
+    font-size: 1.5rem; /* Tamanho do texto dentro do botão */
+  }
+
+  .sessao_fim {
+    max-width: 1200px; /* Amplia o container final */
+    height: 400px;
+    font-size: 3rem; /* Texto destacado */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+ @-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+

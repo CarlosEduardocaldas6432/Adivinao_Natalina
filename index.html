@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Adivinhação Natalina</title>
+</head>
+<body>
+    <h2>Adivinhação Natalina</h2>
+
+    <audio src="./sons/botao_tentativa.mp3"   class="som_botao_tentativa" ></audio>
+    <audio src="./sons/fim_de_jogo.mp3"       class="som_fim_de_jogo" ></audio>
+    <audio src="./sons/jogado_perdeu.mp3"     class="som_jogado_perdeu" ></audio>
+    <audio src="./sons/jogador_acertou.mp3"   class="som_jogador_acertou" ></audio>
+    <audio src="./sons/tecla_certa.mp3"       class="som_tecla_certa" ></audio>
+    <audio src="./sons/tecla_errada.mp3"      class="som_tecla_errada" ></audio>
+    <audio src="./sons/tentativa_errada.mp3"  class="som_tentativa_errada" ></audio>
+
+
+
+
+    <section class="sessao_principal">
+        <div class="palavras_tentadas">
+            <h3 class="titilo_palavras_tentadas" >palavras tentadas</h3>
+            <p id="palavras_tentadas_1"></p>
+            <p id="palavras_tentadas_2" ></p>
+            <p id="palavras_tentadas_3" ></p>
+        </div>
+        <div class="foto_pricipal" >
+            <img class="foto_interrogacao" src="./imgs/site/interrogacao.png" alt="">
+            <img class="foto_do_jogo" src="" alt="">
+        </div>
+        <div class="dicas">
+          <h3 class="tiulo_dicas" >dicas</h3>
+          <p id="dica1" ></p>  
+          <p id="dica2" ></p>  
+        </div>
+    </section>
+    <section class="sessao_nome_da_foto" >
+
+
+
+
+
+    </section>
+
+    <section class="sesao_entrada_dados">
+
+        <div class="input-container">
+            <input type="text" name="text" class="input" autocomplete="off"   placeholder="">
+            <div class="highlight"></div>
+          </div>
+        <button class="botao" ><img class="checkmark" src="./imgs/site/checkmark 1.svg" alt=""></button>
+    </section>
+
+    <section class="sessao_info_jogo" >
+
+        <h3 class="info_tentativas" >TENTATIVAS:0/3</h3>
+        <h3 class="info_letras_gastas" >LETRAS GASTAS:0/10</h3>
+
+    </section>
+    <section class="sessao_teclado" > 
+        <div class="linha_teclas">
+            <div id="q" class="teclas"><p class="letras_das_teclas">Q</p></div>
+            <div id="w" class="teclas"><p class="letras_das_teclas">W</p></div>
+            <div id="e" class="teclas"><p class="letras_das_teclas">E</p></div>
+            <div id="r" class="teclas"><p class="letras_das_teclas">R</p></div>
+            <div id="t" class="teclas"><p class="letras_das_teclas">T</p></div>
+            <div id="y" class="teclas"><p class="letras_das_teclas">Y</p></div>
+            <div id="u" class="teclas"><p class="letras_das_teclas">U</p></div>
+            <div id="i" class="teclas"><p class="letras_das_teclas">I</p></div>
+            <div id="o" class="teclas"><p class="letras_das_teclas">O</p></div>
+            <div id="p" class="teclas"><p class="letras_das_teclas">P</p></div>
+
+        </div>
+        <div class="linha_teclas">
+            <div id="a" class="teclas"><p class="letras_das_teclas">A</p></div>
+            <div id="s" class="teclas"><p class="letras_das_teclas">S</p></div>
+            <div id="d" class="teclas"><p class="letras_das_teclas">D</p></div>
+            <div id="f" class="teclas"><p class="letras_das_teclas">F</p></div>
+            <div id="g" class="teclas"><p class="letras_das_teclas">G</p></div>
+            <div id="h" class="teclas"><p class="letras_das_teclas">H</p></div>
+            <div id="j" class="teclas"><p class="letras_das_teclas">J</p></div>
+            <div id="k" class="teclas"><p class="letras_das_teclas">K</p></div>
+            <div id="l" class="teclas"><p class="letras_das_teclas">L</p></div>
+            
+
+        </div>
+        <div class="linha_teclas">
+            <div id="z" class="teclas"><p class="letras_das_teclas">Z</p></div>
+            <div id="x" class="teclas"><p class="letras_das_teclas">X</p></div>
+            <div id="c" class="teclas"><p class="letras_das_teclas">C</p></div>
+            <div id="v" class="teclas"><p class="letras_das_teclas">V</p></div>
+            <div id="b" class="teclas"><p class="letras_das_teclas">B</p></div>
+            <div id="n" class="teclas"><p class="letras_das_teclas">N</p></div>
+            <div id="m" class="teclas"><p class="letras_das_teclas">M</p></div>
+        </div>
+
+    </section>
+
+    <section class="sessao_lose">
+        <h3 class="titulo_final">Você Perdeu!</h3>
+        <div class="botao_perdeu" >
+            <button class="pushable">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">Jogar Novamente</span>
+              </button>   
+        </div>
+    </section>
+
+
+    <section class="sessao_win">
+        <h3 class="titulo_final">Você Ganhou!!</h3>
+        <div class="botao_ganhou" >
+            <button class="pushable">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">proxima desafio</span>
+              </button>   
+        </div>
+    </section>
+
+
+
+    <section class="sessao_fim" >
+
+        <h3 class="titulo_final">Parabéns Você cheu ao Fim </h3>
+        <h3 class="titulo_final">Tenha um Feliz Natal</h3>
+
+    </section>    
+
+
+    <script  defer type="module"  src="./script.js"></script>
+</body>
+</html>
